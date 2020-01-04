@@ -114,6 +114,7 @@ class DataGenerator(Sequence):
         )
         return aug
 
+
 if __name__ == '__main__':
     basepath = r'F:\Code\DL\CAPTCHA'
     data_file = os.path.join(basepath, 'data', 'train', 'train_label.csv')
