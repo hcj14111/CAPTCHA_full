@@ -14,7 +14,7 @@ if __name__ == "__main__":
     testpath = './data/test/'  # 测试集路径。包含验证码图片文件
     result_folder_path = './submission.csv'  # 结果输出文件路径
 
-    ### 调用自己的工程文件，并这里生成结果文件（dataframe）
+    ### 调用自己的工程文件，并这里生成结果文件(dataframe)
     result = testmodel.model(testpath)
     print(result)
 
