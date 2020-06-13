@@ -16,16 +16,6 @@ from keras.models import load_model
 from util import utils
 from util.utils import *
 
-# config_path = r'./config.json'
-# with open(config_path) as config_buffer:
-#     config = json.loads(config_buffer.read())
-#
-# model_data = config['model']['model_data']
-# model_path = config['model']['model_path']
-# data_file = config['predict']['predict_data_file']
-# data_dir = config['predict']['predict_data_folder']
-# img_shape = (120, 40)
-
 
 def model(testpath):
     # your model goes here
@@ -38,15 +28,14 @@ def model(testpath):
 
     # load data
     print("reading start!")
-    pic_names = [str(x) + ".jpg" for x in range(1, 5001)]
-    pics_path = [(testpath + pic_name) for pic_name in pic_names]
+    pics_name = [str(x) + ".jpg" for x in range(1, 5001)]
+    pics_path = [(testpath + pic_name) for pic_name in pics_name]
     X = load_data(pics_path=pics_path)
     print("reading end!")
 
     # predict
     predict = model.predict(X, batch_size=16)
     ans = utils.decode_predict(predict)
-
 
     # the format of result-file
     # 这里可以生成结果文件

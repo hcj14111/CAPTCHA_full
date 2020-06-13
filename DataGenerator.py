@@ -116,7 +116,8 @@ class DataGenerator(Sequence):
 
 
 if __name__ == '__main__':
-    basepath = r'F:\Code\DL\CAPTCHA'
+    print("[INFO] test DataGenerator")
+    basepath = r'F:\data_set\captcha'
     data_file = os.path.join(basepath, 'data', 'train', 'train_label.csv')
     data_dir = os.path.join(basepath, 'data', 'train')
     batch_size = 16
